@@ -1,0 +1,567 @@
+@media screen and (max-width: 971px){
+    .box{
+        width: 971px;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.clearfix:after {
+    content: "";     /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+    display: block;   /*加入的这个元素转换为块级元素。*/
+    clear: both;     /*清除左右两边浮动。*/
+    /*visibility: hidden;      /!*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*!/*/
+}
+.clearfix {zoom:1;}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+a:hover {text-decoration: none;}
+.nav_bar{
+    height: 30px;
+    background:#333;
+}
+.desk{
+    margin:0 auto;
+    position:relative;
+}
+.gray{
+    height: 40px;
+    background:#e4e4e4;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+.logo{
+    width: 971px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.log_pic{
+    width: 234px;
+    height: 73px;
+    float: left;
+    margin: 0;
+}
+.log_pic img{
+    width: 100%;
+    height: 100%;
+}
+.pag_int{
+    float: left;
+    font-family: '应用字体 Bold', '应用字体';
+    font-size:18px;
+    color:#999;
+    margin-left: 10px;
+    box-sizing: border-box;
+    padding-top:40px;
+}
+.good{
+    background:#e4484c;
+}
+.detail{
+    height: 95px;
+    width: 971px;
+    position:relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.ord_num{
+    color:white;
+    font-size:14px;
+    padding-left: 5px;
+    padding-top: 29px;
+    padding-right: 143px;
+}
+.ord_num p{
+    line-height: 26px;
+}
+.code2{
+    width: 86px;
+    height: 86px;
+    padding-top: 4px;
+}
+.code2_pic{
+    width: 100%;
+    height: 100%;
+}
+.sum_num{
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding-left:14px;
+    line-height:95px;
+    margin: 0;
+}
+.click{
+    width: 140px;
+    height: 40px;
+    color:white;
+    font-size:14px;
+}
+.click:hover{
+    color:white;
+    text-decoration:none;
+}
+.dowm_pic{
+    position:absolute;
+    top: 10px;
+    right:16px;
+}
+.ord_btn{
+    width: 141px;
+    height: 40px;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    background:url("../images/B2C/u10159.png") no-repeat;
+    line-height:40px;
+    text-align: center;
+}
+.pay_password{
+    width: 234px;
+    height: 36px;
+}
+.dtl_down{
+    height: 95px;
+    padding-left: 118px;
+    border-top:2px solid white;
+    display: none;
+}
+.ch_meth{
+    background:#f4f5fa;
+}
+.chs_tit{
+    height: 34px;
+    line-height: 34px;
+    font-size:14px;
+    box-sizing: border-box;
+    width: 971px;
+    margin: 0 auto;
+}
+
+.or_show_lik{
+    color:#f00;
+    font-size:12px;
+}
+.wx_list{
+    margin: 0 auto;
+    width: 971px;
+    height: 41px;
+}
+.t_fl{
+    float: left;
+    height: 28px;
+    padding-top: 13px;
+}
+.t_fl a{
+    display: block;
+    padding-left: 13px;
+    height: 16px;
+    line-height: 16px;
+    text-decoration:none;
+    color:#333;
+    font-size:12px;
+    font-weight:bold;
+}
+.t_active{
+    padding-right: 17px;
+    border-right:1px solid black;
+}
+
+.footer_area{
+    text-align: center;
+    background:#282c32;
+    height: 75px;
+    padding-top: 25px;
+    color:#999;
+    font-size:16px;
+}
+.ft_bl{
+    height: 30px;
+    background:#21252b;
+    margin-bottom: 1px;
+}
+/*支付页面，此处为试用，是否隐藏看后面*/
+.section{
+    /*display: none;*/
+}
+/*微信支付页面样式*/
+.section_none{
+    /*display: none;*/
+    /*height: 504px;*/
+}
+.wx_section_t{
+    padding-left: 118px;
+}
+.wx_head{
+
+}
+.wx_foot{
+    height: 46px;
+    line-height:46px;
+    background:#f4f5fa;
+    border-top:1px solid #797979;
+    padding-left: 118px;
+    margin-bottom: 69px;
+}
+.wx_cell{
+    float: left;
+}
+.wx_section{
+    padding-bottom: 56px;
+}
+.wx_code{
+    margin-bottom: 20px;
+}
+.qrCode{
+    position:relative;
+}
+.wx_pos{
+    /*display: none;*/
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.wx_opa{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:black;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+}
+.wx_refresh{
+    position:absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    background:url("../images/B2C/refresh.png") no-repeat;
+    background-size:cover;
+    cursor:pointer;
+}
+.nav_cell{
+    float: left;
+    font-size:12px;
+    padding: 0 10px;
+    border-right:1px solid #666;
+}
+.nav_cell a{
+        color:white;
+    }
+.nav_list{
+    margin: 0 170px 0 0;
+    padding-top: 7px;
+    float: right;
+}
+.nav_last{
+    border:none;
+}
+.cont_list{
+    font-size:12px;
+    line-height:26px;
+    color:white;
+}
+.cont_tit{
+    margin-left: 78px;
+}
+.t_method{
+    border-bottom:26px solid #f4f5fa;
+}
+/*网银支付的支付中页面*/
+.paymentIn{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.payment_pos{
+    width: 100%;
+    height: 100%;
+    background:white;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+}
+.payIn_pag{
+    width: 430px;
+    height: 344px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -172px;
+    margin-top: -215px;
+    border:1px solid #797979;
+    background:white;
+}
+.payment_h{
+    height: 43px;
+    background:#f00;
+    color:white;
+    font-size:16px;
+    text-align: center;
+    line-height:43px;
+    position:relative;
+}
+.close{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    background:url("../images/B2C/iconfont.png") no-repeat;
+    cursor:pointer;
+}
+.end_cell{
+    width: 138px;
+    height: 38px;
+    border:1px solid #797979;
+    font-size:12px;
+    line-height:38px;
+    text-align: center;
+}
+.end_btn{
+    width: 337px;
+    margin: 0 auto;
+}
+.end_act{
+    width: 140px;
+    height: 40px;
+    background:#f66;
+    font-size:12px;
+    line-height:38px;
+    text-align: center;
+}
+.end_act a{
+    color:white;
+}
+.end_cell a{
+    color:#333;
+}
+.prompt{
+    height: 135px;
+    width: 337px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.pro_l{
+    margin-left: 10px;
+}
+.pro_l p{
+    font-size:12px;
+    line-height: 16px;
+}
+.pro_l_bottom{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom:1px dashed #797979;
+}
+/*网银支付的支付中页面*/
+/*中间网银支付*/
+.method_list{
+    width: 971px;
+    height: 296px;
+    margin: 0 auto;
+    padding-top: 6px;
+    display: none;
+}
+.account_pay{
+    width: 394px;
+    height: 275px;
+    border:1px solid #797979;
+}
+.account_pay_hd{
+    height: 41px;
+    line-height: 41px;
+    font-size:12px;
+    color:#333;
+    font-weight:bold;
+    text-align: center;
+    background:#f2f2f2;
+    margin-bottom: 17px;
+}
+.account_pay_sec p{
+    height: 25px;
+    line-height: 25px;
+    font-size:12px;
+    color:#333;
+    margin-left: 35px;
+    margin-bottom: 26px;
+}
+.same{
+    width: 205px;
+    height: 23px;
+    border:1px solid #bebebe;
+}
+.account_sign{
+    width: 232px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background:#f00;
+    color:white;
+    font-size:12px;
+    border:none;
+}
+.account_pay_ft{
+    width: 232px;
+    margin: 93px auto 0px;
+}
+.gateway_pay{
+    width: 394px;
+    height: 275px;
+    border:1px solid #797979;
+    margin-left: 9px;
+}
+.gateway_pay_hd{
+    height: 41px;
+    line-height: 41px;
+    font-size:12px;
+    color:#333;
+    font-weight:bold;
+    text-align: center;
+    background:#f2f2f2;
+    margin-bottom: 30px;
+}
+.gateway_prepare{
+    width: 394px;
+    text-align: center;
+    font-size:12px;
+    color:#333;
+}
+.gateway_pic{
+    width: 394px;
+    text-align: center;
+    margin-top: 45px;
+}
+.gateway_pay_ft{
+    width: 232px;
+    margin: 45px auto 0px;
+}
+/*银行卡选择支付页面*/
+.gateway_card{
+    width: 971px;
+    height: 446px;
+    margin: 0 auto;
+}
+.gateway_card_hd{
+    font-size:0;
+}
+.gateway_card_tit{
+    border:1px solid #797979;
+    width: 768px;
+}
+.alike{
+    width: 140px;
+    height: 40px;
+    border:1px solid #797979;
+    line-height: 40px;
+    text-align:center;
+    font-size:12px;
+    color:#333;
+    background:white;
+    vertical-align: top;
+}
+.active{
+    background:#f00;
+    color:white;
+    border:none;
+    outline:none;
+    width: 140px;
+    height: 40px;
+}
+/*定位转浮动,为了后来新创建的li按现有布局进行排列*/
+.gateway_list{
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 744px;
+    margin: 35px auto 0px;
+}
+.gateway_list li{
+    position:absolute;
+    width: 143px;
+    height: 34px;
+    border:1px solid #e3e3e3;
+}
+.sign_bank{
+    margin-top: 34px;
+    margin-bottom: 10px;
+}
+.signIn{
+    display: inline-block;
+    width: 156px;
+    height: 40px;
+    background:#f00;
+    color:white;
+    font-size:12px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/*没选择银行时点击按钮的样式和提示信息display: block;*/
+.signIn_none{
+    background:#ccc;
+}
+.sign_bank_hint{
+    font-size:12px;
+    color:#f00;
+    display: none;
+}
+/**/
+.pay_problem{
+    font-size:12px;
+    color:#333;
+    line-height: 20px;
+}
+.pay_problem_hd{
+    line-height: 56px;
+}
+.moreHelp{
+    color:#169bd5;
+    padding-top: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

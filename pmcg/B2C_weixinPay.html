@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/desk.css"/>
+    <script src="js/weixinpPay.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="picc">
+    <div class="box">
+        <!--上部用户信息和帮助导航条-->
+        <div class="user_nav">
+            <div class="nav_bar clearfix">
+                <ul class="clearfix nav_list">
+                    <li class="nav_cell"><a href="#" id="userName">您好，夏小炬</a></li>
+                    <li class="nav_cell"><a href="#">退出</a></li>
+                    <li class="nav_cell"><a href="#">手机客户端</a></li>
+                    <li class="nav_cell"><a href="#">帮助中心</a></li>
+                    <li class="nav_cell nav_last"><a href="#none">客服电话：400-667-1872</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部-->
+        <div class="head">
+            <!--logo-->
+            <div class="logo clearfix">
+                <h1 class="log_pic">
+                    <img src="images/B2C/u10125.png" alt="logo"/>
+                </h1>
+                <!--个人收银台标题-->
+                <div class="pag_int">
+                    <b>企业|收银台</b>
+                </div>
+            </div>
+        </div>
+        <div class="gray"></div>
+        <div class="desk">
+            <!--订单详情处，订单号订单金额为可变。-->
+            <!--右边订单按钮写成下拉菜单-->
+            <div class="good">
+                <div class="detail clearfix">
+                    <!--分为块，左侧订单号，中间二维码，右侧订单金额-->
+                    <!--1.订单号-->
+                    <div class="ord_num cell">
+                        <p>您正在使用人保金服提供的支付服务，请及时付款!</p>
+                        <p>
+                            订单号:<span id="ordNumber">20170113192150</span>
+                        </p>
+                    </div>
+                    <div class="cell">
+                        <!--2.二维码-->
+                        <!--<div class="code2 cell">-->
+                        <!--<img src="images/B2B/u10200.png" alt="二维码" class="code2_pic"/>-->
+                        <!--</div>-->
+                        <!--3.金额-->
+                        <!--<div class="money cell">-->
+                            <!--<p class="sum_num">-->
+                                <!--订单金额:<b id="sum_num">6.66</b>元-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    </div>
+                    <!--订单详情按钮-->
+                    <div class="ord_btn cell1">
+                        <a href="#none" id="click" class="click">订单详情</a>
+                        <img src="images/B2C/u10161.png" alt="down" class="dowm_pic"/>
+                    </div>
+                </div>
+                <!--订单详情,点击“订单详情”时弹出下拉菜单-->
+                <div class="dtl_down" id="dtl_down">
+                    <div class="promotion-cont clearfix">
+                        <ul class="fl">
+                            <!--按需要添加-->
+                            <li class="cont_list">商品名称：</li>
+                            <li class="cont_list">交易日期：</li>
+                            <li class="cont_list">收款方：</li>
+                        </ul>
+                        <ul class="fl cont_tit">
+                            <li class="cont_list">
+                                <span id="trade">测试商品001</span>
+                            </li>
+                            <li class="cont_list">
+                                <span id="transation">2017-01-14</span>
+                            </li>
+                            <li class="cont_list">
+                                <span id="payee">昌平区紫磐汽配科技有限公司</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--选择支付方式
+            分为三块，
+            1.h2--选择支付方式
+            2.支付的方式，余额，网银等；
+            3.支付密码处
+            -->
+            <!--点击微信支付时只是中间的section处的模块隐藏，下面显示微信支付页面-->
+            <div class="section_none" id="section_none">
+                <div class="wx_section_t">
+                    <div class="wx_head">
+                        <h5>微信支付</h5>
+                    </div>
+                    <div class="wx_section">
+                        <div class="wx_code">
+                            距离二维码过期还有<span id="Timeout">59</span>秒，过期后请刷新页面重新获取二维码。
+                        </div>
+                        <div class="wx_qrCode clearfix">
+                            <!--左侧，用于装生成的二维码-->
+                            <div class="qrCode wx_cell" id="qrCode">
+                                <img src="images/B2C/u23653.png" alt="二维码"/>
+                                <div class="wx_pos">
+                                    <div class="wx_opa"></div>
+                                    <!--刷新按钮，从新生成二维码-->
+                                    <span class="wx_refresh"></span>
+                                </div>
+                            </div>
+                            <!--右侧说明图片-->
+                            <div class="emp_pic wx_cell">
+                                <img src="images/B2C/u23655.png" alt="扫一扫"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--选择其他支付方式，则放回上一级，即section模块display:block;-->
+                <div class="wx_foot">
+                    <a href="B2C.html" id="ret_pay_pag" class="ret_pay_pag">&lt;&nbsp;选择其他支付方式</a>
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer">
+            <div class="ft_bl"></div>
+            <div class="footer_area">
+                <p>
+                    版权所有
+                    <img src="images/B2C/footer.jpg" alt=""/>
+                    2017人保金融服务有限公司
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

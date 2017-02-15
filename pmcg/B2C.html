@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>余额支付</title>
+    <link rel="stylesheet" href="css/desk.css"/>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+    <script src="js/B2C_pag.js"></script>
+</head>
+<body>
+<div class="picc">
+    <div class="box">
+        <!--上部用户信息和帮助导航条-->
+        <div class="user_nav">
+            <div class="nav_bar clearfix">
+                <ul class="clearfix nav_list">
+                    <li class="nav_cell"><a href="#" id="userName">您好，夏小炬</a></li>
+                    <li class="nav_cell"><a href="#">退出</a></li>
+                    <li class="nav_cell"><a href="#">手机客户端</a></li>
+                    <li class="nav_cell"><a href="#">帮助中心</a></li>
+                    <li class="nav_cell nav_last"><a href="#none">客服电话：400-667-1872</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部-->
+        <div class="head">
+            <!--logo-->
+            <div class="logo clearfix">
+                <h1 class="log_pic">
+                    <img src="images/B2C/u10125.png" alt="logo"/>
+                </h1>
+                <!--个人收银台标题-->
+                <div class="pag_int">
+                    <b>企业|收银台</b>
+                </div>
+            </div>
+        </div>
+        <div class="gray"></div>
+        <div class="desk">
+            <!--订单详情处，订单号订单金额为可变。-->
+            <!--右边订单按钮写成下拉菜单-->
+            <div class="good">
+                <div class="detail clearfix">
+                    <!--分为块，左侧订单号，中间二维码，右侧订单金额-->
+                    <!--1.订单号-->
+                    <div class="ord_num fl">
+                        <p>您正在使用人保金服提供的支付服务，请及时付款!</p>
+                        <p>
+                            订单号:<span id="ordNumber">20170113192150</span>
+                        </p>
+                    </div>
+                    <div class="fl">
+                        <!--2.二维码-->
+                        <div class="code2 fl">
+                            <img src="images/B2C/u10200.png" alt="二维码" class="code2_pic"/>
+                        </div>
+                        <!--3.金额-->
+                        <div class="money fl">
+                            <p class="sum_num">
+                                订单金额:<b id="sum_num">6.66</b>元
+                            </p>
+                        </div>
+                    </div>
+                    <!--订单详情按钮-->
+                    <div class="ord_btn">
+                        <a href="#none" id="click" class="click">订单详情</a>
+                        <img src="images/B2C/u10161.png" alt="down" class="dowm_pic"/>
+                    </div>
+                </div>
+                <div class="white_bar"></div>
+                <!--订单详情,点击“订单详情”时弹出下拉菜单-->
+                <div class="dtl_down" id="dtl_down">
+                    <div class="promotion-cont clearfix">
+                        <ul class="fl">
+                            <!--按需要添加-->
+                            <li class="cont_list">商品名称：</li>
+                            <li class="cont_list">交易日期：</li>
+                            <li class="cont_list">收款方：</li>
+                        </ul>
+                        <ul class="fl cont_tit">
+                            <li class="cont_list">
+                                <span id="trade">测试商品001</span>
+                            </li>
+                            <li class="cont_list">
+                                <span id="transation">2017-01-14</span>
+                            </li>
+                            <li class="cont_list">
+                                <span id="payee">昌平区紫磐汽配科技有限公司</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--选择支付方式
+            分为三块，
+            1.h2--选择支付方式
+            2.支付的方式，余额，网银等；
+            3.支付密码处
+            -->
+            <div class="section" id="section">
+                <div class="pay_meth">
+                    <!--第一块--选择支付方式-->
+                    <div class="ch_meth">
+                        <h2 class="chs_tit">选择支付方式</h2>
+                    </div>
+                    <!--第二块，付款的方式-->
+                    <div class="method">
+                        <div class="method_list">
+                            <ul class="meth_tit">
+                                <!--1.优惠-->
+                                <li class="same">
+                                    <div class="meth_list1">
+                                        <!--分为三部分，左边为复选框，中间，右边li为订单信息-->
+                                        <div class="area">
+                                            <!--1.input的ID用来判断是否选中-->
+                                            <div class="dis_che alike">
+                                                <input type="checkbox" name="选中" id="discount" class="mr_no"/>
+                                                <!--如果从后台调名称，下面的span可以加id-->
+                                                <span>优惠</span>
+                                            </div>
+                                            <!--2.余额不是固定的，所以用一个ID -->
+                                            <div class="fl two">
+                                                <img src="images/B2C/discount.png" alt="余额" style="width: 22px;height:18px;vertical-align: middle"/>
+                                                <span class="act_bl_num">选择更多优惠</span>
+                                                <span id="count_bla" class="acc_blance count_bla"></span>
+                                            </div>
+                                            <!--3.-->
+                                            <div class="amount alike1">
+                                                <ul class="amount_tit">
+                                                    <!--多写li为预留用-->
+                                                    <li class="equal">
+                                                        <!--class="act_bl_num"是为了撑开左右距离，不需要的话可以吧class去掉-->
+                                                        <b class="act_bl_num">优惠组合：</b>
+                                                        <span class="acc_blance" id="dis_amount">99999.99</span>元
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--优惠下拉菜单-->
+                                        <div class="discount_h" id="discount_h">
+                                            <div class="discount_menu">
+                                                <ul class="discount_tit">
+                                                    <!--第一个-->
+                                                    <li class="discount_pd">
+                                                        <div class="discount_area">
+                                                            <div class="discount_lst clearfix">
+                                                                <div class="discount_pic fl">
+                                                                    <input type="checkbox" class="packet_che"/>
+                                                                    <img src="images/B2C/redpacket.png" alt="红包" class="red_md"/>
+                                                                </div>
+                                                                <div class="fl dis_cont">
+                                                                    <b id="theShop">xx商家现金优惠红包：</b><b id="theCont">剩余金额1元(10天后失效)</b>
+                                                                </div>
+                                                                <div class="fr dis_amount">
+                                                                    优惠：
+                                                                    <span>1.00</span>元
+                                                                </div>
+                                                            </div>
+                                                            <div class="dis_bor"></div>
+                                                            <div class="discount_lst clearfix">
+                                                                <div class="discount_pic fl">
+                                                                    <input type="checkbox" class="packet_che"/>
+                                                                    <img src="images/B2C/redpacket.png" alt="红包" class="red_md"/>
+                                                                </div>
+                                                                <div class="fl dis_cont">
+                                                                    <b id="theOrder">xx商家订单促销红包：</b><b id="remCont">剩余金额50元(长期有效)</b>
+                                                                </div>
+                                                                <!--<div class="fr dis_amount">-->
+                                                                    <!--优惠：-->
+                                                                    <!--<span>1.00</span>元-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!--第二个-->
+                                                    <li class="discount_pd">
+                                                        <ul class="discount_area">
+                                                            <li class="discount_lst clearfix">
+                                                                <div class="discount_pic fl">
+                                                                    <input type="radio" class="packet_che" name="packet"/>
+                                                                    <img src="images/B2C/common.png" alt="红包" class="red_md"/>
+                                                                </div>
+                                                                <div class="fl dis_cont">
+                                                                    <span id="ponShop">通用优惠券：</span><span id="ponCont">慢100减10元(10天后失效)</span>
+                                                                </div>
+                                                                <div class="fr dis_amount">
+                                                                    优惠：
+                                                                    <span>10.00</span>元
+                                                                </div>
+                                                            </li>
+                                                            <li class="dis_bor"></li>
+                                                            <li class="discount_lst clearfix">
+                                                                <div class="discount_pic fl">
+                                                                    <input type="radio" class="packet_che" name="packet"/>
+                                                                    <img src="images/B2C/common.png" alt="红包" class="red_md"/>
+                                                                </div>
+                                                                <div class="fl dis_cont">
+                                                                    <span id="ponOrder">保险优惠券：</span><span id="ponrem">满300减50元(120天后失效)</span>
+                                                                </div>
+                                                                <!--<div class="fr dis_amount">-->
+                                                                <!--优惠：-->
+                                                                <!--<span>1.00</span>元-->
+                                                                <!--</div>-->
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <!--第三个-->
+                                                    <li class="discount_pd">
+                                                        <div class="discount_area">
+                                                            <!--给ID为了同过选择b标签来从后台取数据-->
+                                                            <div class="discount_lst clearfix" id="integralNum">
+                                                                <div class="discount_pic fl">
+                                                                    <input type="checkbox" class="packet_che"/>
+                                                                    <img src="images/B2C/redpacket.png" alt="红包" class="red_md"/>
+                                                                </div>
+                                                                <div class="fl dis_cont">
+                                                                    共有<span id="integral">2000</span>个人积分，本次已抵扣<b class="integ">20</b>元，
+                                                                    最高可抵扣<b class="integ">&nbsp;20&nbsp;</b>元
+                                                                </div>
+                                                                <div class="fr dis_amount">
+                                                                    优惠：<b>20.00</b>元
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!--第四个确认按钮-->
+                                                    <li>
+                                                        <div class="clearfix">
+                                                            <input type="button" value="确定" id="has_ensure" class="has_ensure"/>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--2.余额支付-->
+                                <li class="same">
+                                    <div class="meth_list1">
+                                        <!--分为三部分，左边为复选框，中间，右边li为订单信息-->
+                                        <div class="area">
+                                            <!--1.input的ID用来判断是否选中-->
+                                            <div class="alike dis_che">
+                                                <input type="checkbox" name="选中" id="blance" class="mr_no"/>
+                                                <!--如果从后台调名称，下面的span可以加id-->
+                                                <span id="">余额支付</span>
+                                            </div>
+                                            <!--2.余额不是固定的，所以用一个ID -->
+                                            <div class="fl two">
+                                                <img src="images/B2C/u10236.png" alt="余额" style="width: 18px;height: 24px;vertical-align: middle;"/>
+                                                <span class="act_bl_num">账户余额：</span>
+                                                <span id="acc_blance" class="acc_blance">99999.99</span>元
+                                            </div>
+                                            <!--3.-->
+                                            <div class="amount alike1">
+                                                <ul class="amount_tit">
+                                                    <!--多写li为预留用-->
+                                                    <li class="equal">
+                                                        <!--class="act_bl_num"是为了撑开左右距离，不需要的话可以吧class去掉-->
+                                                        <b class="act_bl_num">实付金额：</b>
+                                                        <span class="acc_blance" id="pay_amount">99999.99</span>元
+                                                    </li>
+                                                    <!--<li class="equal">-->
+                                                    <!--<span class="act_bl_num">实付金额：</span>-->
+                                                    <!--<span class="acc_blance" id="pay_amount">99999.99</span>元-->
+                                                    <!--</li>-->
+                                                    <!--<li class="equal"></li>-->
+                                                </ul>
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--3.白条支付-->
+                                <li class="same">
+                                    <div class="meth_list1">
+                                        <!--分为三部分，左边为复选框，中间，右边li为订单信息-->
+                                        <div class="area">
+                                            <!--1.input的ID用来判断是否选中-->
+                                            <div class="alike dis_che">
+                                                <input type="checkbox" name="选中" id="lous" class="mr_no"/>
+                                                <!--如果从后台调名称，下面的span可以加id-->
+                                                <span>白条支付</span>
+                                            </div>
+                                            <!--2.用来显示选择白条后的内容-->
+                                            <div class="fl inform">
+                                                <div class="fl inf_mid">
+                                                    <a href="#none" class="stages">
+                                                        <!--上面的选中图标-->
+                                                        <span></span>
+                                                        <b>3期|127元/期</b>
+                                                        <span style="display: none">含手续费</span>
+                                                    </a>
+                                                </div>
+                                                <ul class="fl">
+                                                    <li class="fl item">可用额度</li>
+                                                    <li class="fl item">12345元</li>
+                                                    <li class="fl item item_no">白条还款日期</li>
+                                                </ul>
+                                            </div>
+                                            <!--3.打白条-->
+                                            <div class="fr lous_num">
+                                                <b>打白条：</b>
+                                                <span class="lous_red">379.00</span>
+                                                元
+                                            </div>
+                                            <!--4.预留,参考京东的鼠标移入来显示白条信息-->
+                                            <div></div>
+                                        </div>
+                                        <!--白条选择下拉框-->
+                                        <div class="lous_tit" id="lous_tit">
+                                            <div class="clearfix">
+                                                <p class="fl available">
+                                                    可用额度:
+                                                    <span id="avai_fund">6270元</span>
+                                                </p>
+                                                <p class="fl">
+                                                    白条还款日期：
+                                                    <span id="lous_date">2017-02-14</span>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <ul class="lous_list clearfix" id="lous_list">
+                                                    <li class="fl project">
+                                                        <strong></strong>
+                                                        <a href="#none">
+                                                            <!--上面的选中图标-->
+                                                            <span><b>1期</b>|379.06元/期</span>
+                                                            <span style="display: none">含手续费</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="fl project selected">
+                                                        <strong></strong>
+                                                        <a href="#none" class="effect">
+                                                            <!--上面的选中图标-->
+                                                            <span><b>3期</b>|127.92元/期</span>
+                                                            <span style="display: none">含手续费</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="fl project">
+                                                        <strong></strong>
+                                                        <a href="#none">
+                                                            <!--上面的选中图标-->
+                                                            <span><b>6期</b>|65.10元/期</span>
+                                                            <span style="display: none">含手续费</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="fl project">
+                                                        <strong></strong>
+                                                        <a href="#none">
+                                                            <!--上面的选中图标-->
+                                                            <span><b>12期</b>|33.67元/期</span>
+                                                            <span style="display: none">含手续费</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="stageInfor">
+                                                <ul class="clearfix">
+                                                    <li class="fl ditto">已选择分3期</li>
+                                                    <li class="fl ditto">每期含分期服务费2.26元</li>
+                                                    <li class="fl ditto dit_none">分期服务费率0.6%/月</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--4.快捷支付-->
+                                <li class="same">
+                                    <div class="meth_list2">
+                                        <!--分为三部分，左边为复选框，中间，右边li为订单信息-->
+                                        <div class="area">
+                                            <!--1.input的ID用来判断是否选中-->
+                                            <div class="alike dis_che">
+                                                <!--此复选框选中时弹出下面的选择列表，且仅有此复选框选中时下面支付为跳转网银并支付
+                                                1、企业网银
+                                                2、个人网银
+                                                当此复选框和余额复选框同时选中时，为混合支付，且支付为输入密码支付
+                                                -->
+                                                <input type="checkbox" name="选中" id="quick" class="mr_no"/>
+                                                <!--如果从后台调名称，下面的span可以加id-->
+                                                <span>快捷支付</span>
+                                            </div>
+                                            <!--2.添加新卡-->
+                                            <div class="fr append">
+                                               <!--添加新卡-->
+                                                <input type="button" value="+添加新卡" id="addCard" class="addCard"/>
+                                            </div>
+                                        </div>
+                                        <!--快捷支付弹出框-->
+                                        <div class="alt_quickPay" id="alt_quickPay">
+                                            <ul class="quickPay_tit" id="quickPay_tit">
+                                                <li>
+                                                    <input type="radio" name="quickPayment"/>
+                                                    <img src="images/bank_jiaotong.jpg" alt="银行卡"/>
+                                                    <!--通过判断银行卡是16还是19来判断是借记卡还是信用卡，同时截取后四位，放入span中-->
+                                                    <span>信用卡(4311)</span>
+                                                    <b>|单笔限额5千</b>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="quickPayment"/>
+                                                    <img src="images/bank_gongshang.jpg" alt="银行卡"/>
+                                                    <!--通过判断银行卡是16还是19来判断是借记卡还是信用卡，同时截取后四位，放入span中-->
+                                                    <span>储蓄卡(1234)</span>
+                                                    <b>|单笔限额5千</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--5.网银支付-->
+                                <li class="same">
+                                    <div class="meth_list2">
+                                        <!--分为三部分，左边为复选框，中间，右边li为订单信息-->
+                                        <div class="area">
+                                            <!--1.input的ID用来判断是否选中-->
+                                            <div class="alike dis_che">
+                                                <!--此复选框选中时弹出下面的选择列表，且仅有此复选框选中时下面支付为跳转网银并支付
+                                                1、企业网银
+                                                2、个人网银
+                                                当此复选框和余额复选框同时选中时，为混合支付，且支付为输入密码支付
+                                                -->
+                                                <input type="checkbox" name="选中" id="payment" class="mr_no"/>
+                                                <!--如果从后台调名称，下面的span可以加id-->
+                                                <span>网银支付</span>
+                                            </div>
+                                            <!--2.余额不是固定的，所以用一个ID -->
+                                            <div class="fl two">
+                                                <img src="images/B2C/blankCard.jpg" alt="网银" style="width: 23px;height:16px;vertical-align: middle"/>
+                                                <span class="">选择银行，请确保已开通网上银行支付功能</span>
+                                            </div>
+                                            <!--3.添加银行卡-->
+                                            <div class="fr addcard_section">
+                                                <a href="#none" class="addcard_add" id="addcard_add">添加银行卡&gt</a>
+                                            </div>
+                                        </div>
+                                        <!--银行的弹出框-->
+                                        <div class="online_bk" id="online_bk">
+                                            <ul class="bk_tit" id="bk_tit">
+                                                <li class="active cell2"><a href="#none">企业银行</a></li>
+                                                <li class="cell2"><a href="#none">个人银行</a></li>
+                                            </ul>
+                                            <!--对应第一个li-->
+                                            <div class="bk_show">
+                                                <!--id给到ul,暂时只按设计图支持16个，以后如果想再添加银行卡列表，可以通过创建li,appendTo到ul里面，
+                                                所以把id给ul，在js里面通过id获取ul节点。
+                                                -->
+                                                <ul class="bk_show_tit" id="bk_show_tit">
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_gongshang.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_jianshe.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_zhaoshang.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_nongye.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_jiaotong.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_guangfa.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_zhongguo.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_minsheng.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_huaxia.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_xingye.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_guangda.jpg" alt="银行"/>
+                                                    </li>
+                                                    <!--点击显示隐藏的银行，同时此li的img的src也改变-->
+                                                    <li class="ac_fl" id="ac_click">
+                                                        <img src="images/B2C/more.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl ac_hid">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_zhongxin.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl ac_hid">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_shanghai.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl ac_hid">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_pingan.jpg" alt="银行"/>
+                                                    </li>
+                                                    <li class="ac_fl ac_hid">
+                                                        <input type="radio" name="bank"/>
+                                                        <img src="images/bank_beijing.jpg" alt="银行"/>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--支付方式：是密码还是跳转到网银并支付-->
+                            <div class="meth_pay_pag">
+                                <!--1.密码支付-->
+                                <div class="pay_pag_t">
+                                    <span class="pay_pag_password">支付密码：</span>
+                                    <input type="password" placeholder="请输入密码" id="password" class="pay_password"/>
+                                    <a href="#none" class="for_pass">忘记支付密码？</a>
+                                </div>
+                                <div class="pay_pag_b clearfix">
+                                    <div class="pay_fl">
+                                        <!--classnName为ensure_psw_red时背景色为红色-->
+                                        <a href="#none" id="ensure_psw" class="ensure_psw">确认付款</a>
+                                    </div>
+                                    <div class="or_show pay_fl">
+                                        <a href="#" class="or_show_lik" id="or_show_lik">错误提示信息</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--第三块;其他支付方式-->
+                    <div class="ch_meth">
+                        <h2 class="chs_tit">其他支付方式</h2>
+                    </div>
+                    <div class="t_method">
+                        <ul class="clearfix wx_list">
+                            <li class="t_fl"><a href="B2C_weixinPay.html" id="wx_pay" class="t_active">微信支付</a></li>
+                            <li class="t_fl"><a href="B2CzfbPay.html" id="zfb_pay" class="t_active">支付宝</a></li>
+                            <li class="t_fl"><a href="B2CzfbPay.html" id="rb_pay">人保钱包APP扫一扫</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--点击确认后，网银支付的支付中页面-->
+            <div class="paymentIn" id="paymentIn">
+                <div class="payment_pos"></div>
+                <div class="payIn_pag">
+                    <div class="payment_h">
+                        <p>登录网上银行支付</p>
+                        <b class="close"></b>
+                    </div>
+                    <div class="payment_se" id="payment_se">
+                        <div class="prompt">
+                            <div class="fl">
+                                <img src="images/B2C/point.png" alt="支付"/>
+                            </div>
+                            <div class="fl pro_l">
+                                <p class="pro_l_bottom"><b>请在新开网银页面完成操作后再进行选择</b></p>
+                                <p>支付完成前请不要关闭此窗口</p>
+                                <p>完成支付后请根据您的情况点击下面的按钮：</p>
+                            </div>
+                        </div>
+                        <div class="clearfix end_btn">
+                            <div class="fl end_cell"><a href="#">已完成支付</a></div>
+                            <div class="fr end_act"><a href="#">支付遇到问题</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--优惠券页面包含“”和“抵现完成”两个-->
+            <div class="cash">
+                <!--定位浮层-->
+                <div class="cash_pos"></div>
+                <!--积分使用-->
+                <div class="cash_pag" id="cash_pag" style="display: none">
+                    <div class="cash_head">
+                        <p>人保积分抵现</p>
+                        <span class="cash_close" id="cash_close"></span>
+                    </div>
+                    <div class="cash_section">
+                        <div class="cash_section_pag">
+                            我的人保22000个，本次最高可使用2000个人保积分，抵扣<span class="cash_alt_num" id="cash_alt_num">20</span>元
+                        </div>
+                        <div class="cash_use_pag">
+                           <p>
+                               <b class="cash_use_b">我要抵扣</b>
+                               <input type="text" class="cash_use_pt"/>
+                               <b class="cash_use_b">元</b>，
+                               <a href="#none" class="cash_rule" id="goTo">抵现规则</a>
+                           </p>
+                            <p class="cash_gray">
+                                <!--此处个ID是为了让span的值为上面ID=cash_alt_num的值相等，只取一次数据就可以-->
+                                可输入1-<span id="cash_alt_same">20</span>的整数
+                            </p>
+                        </div>
+                        <div class="cash_btn">
+                            <input type="button" value="确定" id="cash_ensure" class="cash_ensure"/>
+                            <a href="#" class="cash_rule" id="cash_close_a">取消</a>
+                        </div>
+                    </div>
+                </div>
+                <!--积分使用说明-->
+                <div class="integral_use_exp cash_pag" id="integral_use_exp">
+                    <div class="cash_head">
+                        <p>人保积分抵现规则</p>
+                        <span class="cash_close" id="use_exp_close"></span>
+                    </div>
+                    <div class="use_exp_section">
+                        <div>
+                            <p class="use_exp_b"><b>使用条件:</b></p>
+                            <p>1.订单金额大于20元（含）；</p>
+                            <p>2.积分数量大于100个（含）；</p>
+                            <p>3.积分支付不得超过每笔订单应付金额的50%；</p>
+                        </div>
+                        <div class="use_exp_num">
+                            <p class="use_exp_b"><b>使用数量:</b></p>
+                            <p>1.使用积分为100的整数倍；</p>
+                            <p>2.100积分抵1元；</p>
+                        </div>
+                        <div class="use_know">
+                            <!--此处点击“我知道了”和点击“close”效果一样，为关闭此窗口，返回抵现窗口-->
+                            <a href="#none" class="use_exp_know" id="use_exp_know">
+                                <b>我知道了</b>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--短信验证浮层-->
+            <div class="sms" id="sms">
+                <div class="sms_pos"></div>
+                <div class="sms_pag">
+                    <span class="sms_close" id="sms_close"></span>
+                    <div class="sms_head">快捷支付</div>
+                    <div class="phone_num">
+                        <b>手机动态码：</b>
+                        <input type="text" placeholder="请输入手机短信验证码" class="sms_text"/>
+                        <input type="button" value="获取动态码" class="sms_btn"/>
+                    </div>
+                    <div>
+                        <input type="button" value="下一步" class="sms_ensure" id="sms_ensure"/>
+                    </div>
+                </div>
+            </div>
+            <!--输入银行卡号-->
+            <div class="input_card" id="input_card">
+                <div class="sms_pos"></div>
+                <div class="input_pag">
+                    <span class="sms_close" id="input_close"></span>
+                    <div class="input_head">合作银行/机构</div>
+                    <div class="input_card_num">
+                        <b>卡号：</b>
+                        <input type="text" class="input_text"/>
+                    </div>
+                    <div>
+                        <input type="button" value="下一步" class="input_ensure" id="input_ensure"/>
+                    </div>
+                </div>
+            </div>
+            <!--添加借记卡-->
+            <div class="debit_card" id="debit_card">
+                <div class="sms_pos"></div>
+                <div class="debit_pag">
+                        <span class="sms_close" id="debit_close"></span>
+                        <div class="debit_head">添加快捷银行卡</div>
+                    <div class="debit_section">
+                        <div class="debit_sec_head">请如实填写以下信息用于银行卡验证</div>
+                        <div class="debit_sec">
+                            <ul class="debit_tit">
+                                <li class="debit_item clearfix">
+                                    <span class="fl">银行卡类型：</span>
+                                    <p class="fl type" id="type">借记卡</p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">开户行：</span>
+                                    <p class="fl">
+                                        <img src="images/bank_zhaoshang.jpg" alt="银行" style="vertical-align:top;"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">开户姓名：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="夏小炬"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">银行卡号：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="1234 5678 1234 1234"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">证件类型：</span>
+                                    <p class="fl item_p">
+                                        <select name="证件类型" id="documentType" class="documentType">
+                                            <option value="1">身份证</option>
+                                            <option value="2">军人证</option>
+                                            <option value="3">学生证</option>
+                                        </select>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">证件号码：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="1234567812341234"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">银行预留手机号：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="" placeholder="请输入此卡在银行预留的手机号" class="reserve_num" id="reserve_num"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">手机动态码：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="" class="trends_code" id="trends_code"/>
+                                        <input type="button" value="获取动态码" class="gain_code" id="gain_code"/>
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="debit_agree">
+                                <input type="checkbox" id="agree" class="agree"/>我同意
+                                <a href="#none" class="agreement">人保金服快捷支付协议</a>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="button" value="添加快捷银行卡" class="entrue_addcard" id="entrue_addcard"/>
+                            <input type="button" value="取消" class="cancel_addcard" id="cancel_addcard"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--添加信用卡-->
+            <div class="credit_card" id="credit_card">
+                <div class="sms_pos"></div>
+                <div class="credit_pag">
+                    <span class="sms_close" id="credit_close"></span>
+                    <div class="debit_head">添加快捷银行卡</div>
+                    <div class="debit_section">
+                        <div class="debit_sec_head">请如实填写以下信息用于银行卡验证</div>
+                        <div class="debit_sec">
+                            <ul class="debit_tit">
+                                <li class="debit_item clearfix">
+                                    <span class="fl">银行卡类型：</span>
+                                    <p class="fl type" id="credit">信用卡</p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">开户行：</span>
+                                    <p class="fl">
+                                        <img src="images/bank_zhaoshang.jpg" alt="银行" style="vertical-align:top;"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">开户姓名：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="夏小炬"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">银行卡号：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="1234 5678 1234 1234"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">证件类型：</span>
+                                    <p class="fl item_p">
+                                        <select name="证件类型" id="credit_documentType" class="documentType">
+                                            <option value="1">身份证</option>
+                                            <option value="2">军人证</option>
+                                            <option value="3">学生证</option>
+                                        </select>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">有效期：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="01" class="credit_input"/>&nbsp;月
+                                        <input type="text" value="09" class="credit_input"/>&nbsp;年
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">CVN2：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="" class="credit_input"/>&nbsp;
+                                        信用卡背面右上角
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">证件号码：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="1234567812341234"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">银行预留手机号：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="" placeholder="请输入此卡在银行预留的手机号" class="reserve_num" id="reserve_num"/>
+                                    </p>
+                                </li>
+                                <li class="debit_item clearfix">
+                                    <span class="fl">手机动态码：</span>
+                                    <p class="fl item_p">
+                                        <input type="text" value="" class="trends_code" id="credit_trends_code"/>
+                                        <input type="button" value="获取动态码" class="gain_code"/>
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="debit_agree">
+                                <input type="checkbox" id="credit_agree" class="agree"/>我同意
+                                <a href="#none" class="agreement">人保金服快捷支付协议</a>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="button" value="添加快捷银行卡" class="entrue_addcard"/>
+                            <input type="button" value="取消" class="cancel_addcard"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--添加成功-->
+            <div class="add_success" id="add_success">
+                <div class="sms_pos"></div>
+                <div class="addSucc_pag">
+                    <div class="addSucc_head">添加快捷银行卡</div>
+                    <div class="addSucc_sec clearfix">
+                        <p class="fl">
+                            <img src="images/B2C/success.png" alt="成功"/>
+                        </p>
+                        <p class="fl">银行卡添加成功！</p>
+                    </div>
+                    <div class="addsucc_foot">
+                        <input type="button" value="确定" id="btn_success" class="btn_success"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer">
+            <div class="ft_bl"></div>
+            <div class="footer_area">
+                <p>
+                    版权所有
+                    <img src="images/B2C/footer.jpg" alt=""/>
+                    2017人保金融服务有限公司
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

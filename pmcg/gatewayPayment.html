@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>网关支付</title>
+    <link rel="stylesheet" href="css/gatewayPayment.css"/>
+    <script src="js/gatewayPayment.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="picc">
+    <div class="box">
+        <!--上部用户信息和帮助导航条-->
+        <div class="user_nav">
+            <div class="nav_bar clearfix">
+                <ul class="clearfix nav_list">
+                    <li class="nav_cell"><a href="#" id="userName">您好，夏小炬</a></li>
+                    <li class="nav_cell"><a href="#">退出</a></li>
+                    <li class="nav_cell"><a href="#">手机客户端</a></li>
+                    <li class="nav_cell"><a href="#">帮助中心</a></li>
+                    <li class="nav_cell nav_last"><a href="#none">客服电话：400-667-1872</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部-->
+        <div class="head">
+            <!--logo-->
+            <div class="logo clearfix">
+                <h1 class="log_pic">
+                    <img src="images/B2C/u10125.png" alt="logo"/>
+                </h1>
+                <!--个人收银台标题-->
+                <div class="pag_int">
+                    <b>企业|收银台</b>
+                </div>
+            </div>
+        </div>
+        <div class="gray"></div>
+        <div class="desk">
+            <!--订单详情处，订单号订单金额为可变。-->
+            <!--右边订单按钮写成下拉菜单-->
+            <div class="good">
+                <div class="detail clearfix">
+                    <!--分为块，左侧订单号，中间二维码，右侧订单金额-->
+                    <!--1.订单号-->
+                    <div class="ord_num fl">
+                        <p>您正在使用人保金服提供的支付服务，请及时付款!</p>
+                        <p>
+                            订单号:<span id="ordNumber">20170113192150</span>
+                        </p>
+                    </div>
+                    <div class="fl">
+                        <!--2.二维码-->
+                        <div class="code2 fl">
+                            <img src="images/B2C/u10200.png" alt="二维码" class="code2_pic"/>
+                        </div>
+                        <!--3.金额-->
+                        <div class="money fl">
+                            <p class="sum_num">
+                                订单金额:<b id="sum_num">6.66</b>元
+                            </p>
+                        </div>
+                    </div>
+                    <!--订单详情按钮-->
+                    <div class="ord_btn">
+                        <a href="#none" id="click" class="click">订单详情</a>
+                        <img src="images/B2C/u10161.png" alt="down" class="dowm_pic"/>
+                    </div>
+                </div>
+                <!--订单详情,点击“订单详情”时弹出下拉菜单-->
+                <div class="dtl_down" id="dtl_down">
+                    <div class="promotion-cont clearfix">
+                        <ul class="fl">
+                            <!--按需要添加-->
+                            <li class="cont_list">商品名称：</li>
+                            <li class="cont_list">交易日期：</li>
+                            <li class="cont_list">收款方：</li>
+                        </ul>
+                        <ul class="fl cont_tit">
+                            <li class="cont_list">
+                                <span id="trade">测试商品001</span>
+                            </li>
+                            <li class="cont_list">
+                                <span id="transation">2017-01-14</span>
+                            </li>
+                            <li class="cont_list">
+                                <span id="payee">昌平区紫磐汽配科技有限公司</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--选择支付方式
+            分为三块，
+            1.h2--选择支付方式
+            2.支付的方式，余额，网银等；
+            3.支付密码处
+            -->
+            <div class="section" id="section">
+                <div class="pay_meth">
+                    <!--第一块--选择支付方式-->
+                    <div class="ch_meth">
+                        <h2 class="chs_tit">选择支付方式</h2>
+                    </div>
+                    <!--第二块，付款的方式-->
+                    <div class="method">
+                        <div class="method_list clearfix" id="method_list">
+                            <div class="account_pay fl">
+                                <div class="account_pay_hd">人保金服账户支付</div>
+                                <div class="account_pay_sec">
+                                    <p>
+                                        <span>账户名：&nbsp;</span>
+                                        <input type="text" class="same"/>
+                                    </p>
+                                    <p>
+                                        <span>登录密码：</span>
+                                        <input type="text" class="same"/>
+                                    </p>
+                                </div>
+                                <div class="account_pay_ft">
+                                    <input type="button" value="登录" class="account_sign" id="account_sign"/>
+                                </div>
+                            </div>
+                            <div class="gateway_pay fl">
+                                <div class="gateway_pay_hd">银行网关支付</div>
+                                <div class="gateway_pay_sec">
+                                    <p class="gateway_prepare">无需注册，信用卡、储蓄卡都可以支付，请准备好卡和手机</p>
+                                    <div class="gateway_pic">
+                                        <img src="images/B2C/example.png" alt="示例图片"/>
+                                    </div>
+                                </div>
+                                <div class="gateway_pay_ft">
+                                    <input type="button" value="下一步" class="account_sign" id="account_next"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--添加银行卡：分为储蓄卡和信用卡-->
+                        <div class="gateway_card" id="gateway_card">
+                            <div class="gateway_card_tit">
+                                <div class="gateway_card_hd">
+                                    <input type="button" value="借记卡" class="alike active"/>
+                                    <input type="button" value="信用卡" class="alike"/>
+                                    <ul class="gateway_list" id="gateway_list">
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_huaxia.jpg" alt="华夏银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_zhaoshang.jpg" alt="招商银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_minsheng.jpg" alt="民生银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_gongshang.jpg" alt="工商银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_nongye.jpg" alt="农业银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_zhongguo.jpg" alt="中国银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_jianshe.jpg" alt="建设银行"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <img src="images/bank_jiaotong.jpg" alt="交通银行"/>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--登录到银行付款-->
+                            <div class="sign_bank">
+                                <a href="#none" id="signIn" class="signIn">登录到网上银行付款</a>
+                                <span class="sign_bank_hint" id="sign_bank_hint">请选择银行</span>
+                            </div>
+                            <!--付款遇到的问题-->
+                            <div class="pay_problem">
+                                <div class="pay_problem_hd"><b>付款遇到的问题:</b></div>
+                                <div>
+                                    <p>1.开通网上银行，轻松付款？</p>
+                                    <p>答：您可使用中国建设银行卡、银联卡登录网上银行完成付款，交通银行民生银行等其他银行即将推出。</p>
+                                    <p>2.没有网上银行，怎样用储蓄卡付款？</p>
+                                    <p>答：您可使用储蓄卡快捷支付轻松完成付款，建行、民生银行、交通银行等其他银行快捷支付即将推出。</p>
+                                </div>
+                                <a href="#none" class="moreHelp" id="moreHelp">更多帮助</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--第三块;其他支付方式-->
+                    <div class="ch_meth">
+                        <h2 class="chs_tit">其他支付方式</h2>
+                    </div>
+                    <div class="t_method">
+                        <ul class="clearfix wx_list">
+                            <li class="t_fl"><a href="B2C_weixinPay.html" id="wx_pay" class="t_active">微信支付</a></li>
+                            <li class="t_fl"><a href="B2CzfbPay.html" id="zfb_pay" class="t_active">支付宝</a></li>
+                            <li class="t_fl"><a href="B2CzfbPay.html" id="rb_pay">人保钱包APP扫一扫</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--点击确认后，网银支付的支付中页面-->
+            <div class="paymentIn" id="paymentIn">
+                <div class="payment_pos"></div>
+                <div class="payIn_pag">
+                    <div class="payment_h">
+                        <p>登录网上银行支付</p>
+                        <b class="close"></b>
+                    </div>
+                    <div class="payment_se" id="payment_se">
+                        <div class="prompt">
+                            <div class="fl">
+                                <img src="images/B2C/point.png" alt="支付"/>
+                            </div>
+                            <div class="fl pro_l">
+                                <p class="pro_l_bottom"><b>请在新开网银页面完成操作后再进行选择</b></p>
+                                <p>支付完成前请不要关闭此窗口</p>
+                                <p>完成支付后请根据您的情况点击下面的按钮：</p>
+                            </div>
+                        </div>
+                        <div class="clearfix end_btn">
+                            <div class="fl end_cell"><a href="#">已完成支付</a></div>
+                            <div class="fr end_act"><a href="#">支付遇到问题</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer">
+            <div class="ft_bl"></div>
+            <div class="footer_area">
+                <p>
+                    版权所有
+                    <img src="images/B2C/footer.jpg" alt=""/>
+                    2017人保金融服务有限公司
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

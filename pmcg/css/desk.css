@@ -1,0 +1,1181 @@
+@media screen and (max-width: 971px){
+    .box{
+        width: 971px;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.clearfix:after {
+    content: "";     /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+    display: block;   /*加入的这个元素转换为块级元素。*/
+    clear: both;     /*清除左右两边浮动。*/
+    /*visibility: hidden;      /!*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*!/*/
+}
+.clearfix {zoom:1;}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+a:hover {text-decoration: none;}
+.nav_bar{
+    height: 30px;
+    background:#333;
+}
+.desk{
+    margin:0 auto;
+    position:relative;
+}
+.gray{
+    height: 40px;
+    background:#e4e4e4;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+.logo{
+    width: 971px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.log_pic{
+    width: 234px;
+    height: 73px;
+    float: left;
+    margin: 0;
+}
+.log_pic img{
+    width: 100%;
+    height: 100%;
+}
+.pag_int{
+    float: left;
+    font-family: '应用字体 Bold', '应用字体';
+    font-size:18px;
+    color:#999;
+    margin-left: 10px;
+    box-sizing: border-box;
+    padding-top:40px;
+}
+.good{
+    background:#e4484c;
+}
+.detail{
+    height: 95px;
+    width: 971px;
+    position:relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.ord_num{
+    color:white;
+    font-size:14px;
+    padding-left: 5px;
+    padding-top: 29px;
+    padding-right: 143px;
+}
+.ord_num p{
+    line-height: 26px;
+}
+.code2{
+    width: 86px;
+    height: 86px;
+    padding-top: 4px;
+}
+.code2_pic{
+    width: 100%;
+    height: 100%;
+}
+.sum_num{
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding-left:14px;
+    line-height:95px;
+    margin: 0;
+}
+.click{
+    width: 140px;
+    height: 40px;
+    color:white;
+    font-size:14px;
+}
+.click:hover{
+    color:white;
+    text-decoration:none;
+}
+.dowm_pic{
+    position:absolute;
+    top: 10px;
+    right:16px;
+}
+.ord_btn{
+    width: 141px;
+    height: 40px;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    background:url("../images/B2C/u10159.png") no-repeat;
+    line-height:40px;
+    text-align: center;
+}
+.pay_password{
+    width: 234px;
+    height: 36px;
+    line-height: 36px;
+}
+.dtl_down{
+    height: 95px;
+    width: 971px;
+    margin: 0 auto;
+    display: none;
+}
+.white_bar{
+    border-top:2px solid white;
+}
+.ch_meth{
+    margin-top: 15px;
+    background:#f4f5fa;
+}
+.chs_tit{
+    height: 34px;
+    line-height: 34px;
+    font-size:14px;
+    box-sizing: border-box;
+    width: 971px;
+    margin: 0 auto;
+}
+.meth_tit{
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 784px;
+}
+.same{
+    /*background:url("../images/B2C/u10192.png") no-repeat;*/
+    /*background-size:100% 100%;*/
+    border:1px solid #797979;
+    width: 784px;
+    margin-bottom: 10px;
+}
+.area{
+    overflow: hidden;
+}
+.alike{
+    float: left;
+    line-height:75px;
+    font-size:12px;
+}
+.alike1{
+    padding-right: 38px;
+    float: right;
+}
+.alike .mr_no{
+    margin: 0;
+    vertical-align: middle;
+}
+.acc_blance{
+    color:#f00;
+}
+.act_bl_num{
+    padding: 0 5px;
+}
+.amount_tit{
+    overflow: hidden;
+}
+.equal{
+    float: left;
+    line-height:75px;
+    font-size:12px;
+}
+.bk_tit{
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.cell2{
+    float: left;
+    width: 104px;
+    height: 44px;
+    line-height:44px;
+    text-align: center;
+    background:url("../images/B2C/u23316.png") no-repeat;
+}
+.cell2 a{
+    color:#333;
+    font-size:12px;
+}
+.active a{
+    color:white;
+}
+.cell2 a:hover{
+    text-decoration:none;
+}
+.active{
+    background:url("../images/B2C/u23314.png") no-repeat;
+}
+.online_bk{
+    padding-bottom: 50px;
+    display: none;
+}
+.bk_show_tit{
+    width: 740px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ac_fl{
+    float: left;
+    width: 172px;
+    height: 35px;
+    border:1px solid #bdcce6;
+    text-align: center;
+    margin-right: 9px;
+    margin-bottom: 10px;
+}
+.ac_fl img{
+    vertical-align: middle;
+}
+.ac_fl input{
+    vertical-align: middle;
+}
+.ac_hid{
+    display: none;
+}
+.pay_pag_t{
+    width: 971px;
+    line-height:40px;
+    padding-top: 20px;
+    margin: 0 auto 16px;
+}
+.pay_pag_password{
+    font-size:14px;
+    color:#333;
+    font-weight:bold;
+}
+.for_pass{
+    font-size:12px;
+    color:#169bd5;
+}
+.pay_pag_b{
+    line-height:40px;
+    margin: 0 auto;
+    width: 971px;
+}
+.pay_fl{
+    float: left;
+    margin-right: 10px;
+}
+.ensure_psw{
+    display: inline-block;
+    width: 315px;
+    height: 40px;
+    background:#f00;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-size:12px;
+}
+.ensure_psw_red{
+    display: inline-block;
+    width: 315px;
+    height: 40px;
+    background:url("../images/B2C/u22945.png") no-repeat;
+    background-size:100% 100%;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+}
+.or_show_lik{
+    color:#f00;
+    font-size:12px;
+    display:none;
+}
+.wx_list{
+    margin: 0 auto;
+    width: 971px;
+    height: 41px;
+}
+.t_fl{
+    float: left;
+    height: 28px;
+    padding-top: 13px;
+}
+.t_fl a{
+    display: block;
+    padding-left: 13px;
+    height: 16px;
+    line-height: 16px;
+    text-decoration:none;
+    color:#333;
+    font-size:12px;
+    font-weight:bold;
+}
+.t_active{
+    padding-right: 17px;
+    border-right:1px solid black;
+}
+
+.footer_area{
+    text-align: center;
+    background:#282c32;
+    height: 75px;
+    padding-top: 25px;
+    color:#999;
+    font-size:16px;
+}
+.ft_bl{
+    height: 30px;
+    background:#21252b;
+    margin-bottom: 1px;
+}
+/*支付页面，此处为试用，是否隐藏看后面*/
+.section{
+    /*display: none;*/
+}
+/*微信支付页面样式*/
+.section_none{
+    /*display: none;*/
+    /*height: 504px;*/
+}
+.wx_section_t{
+    width: 971px;
+    margin: 0 auto;
+}
+.wx_head{
+    font-size:12px;
+    color:#333;
+    line-height: 26px;
+}
+.wx_foot{
+    height: 46px;
+    line-height:46px;
+    background:#f4f5fa;
+    border-top:1px solid #797979;
+    padding-left: 118px;
+    margin-bottom: 69px;
+}
+.ret_pay_pag{
+    font-size:12px;
+    color:#169bd5;
+}
+.wx_cell{
+    float: left;
+}
+.wx_section{
+    padding-bottom: 56px;
+}
+.wx_code{
+    margin-bottom: 20px;
+    font-size:12px;
+    color:#333;
+}
+.qrCode{
+    position:relative;
+}
+.wx_pos{
+    /*display: none;*/
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.wx_opa{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:black;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+}
+.wx_refresh{
+    position:absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    background:url("../images/B2C/refresh.png") no-repeat;
+    cursor:pointer;
+}
+.nav_cell{
+    float: left;
+    font-size:12px;
+    padding: 0 10px;
+    border-right:1px solid #666;
+}
+.nav_cell a{
+        color:white;
+    }
+.nav_list{
+    margin: 0 170px 0 0;
+    padding-top: 7px;
+    float: right;
+}
+.nav_last{
+    border:none;
+}
+.cont_list{
+    font-size:12px;
+    line-height:26px;
+    color:white;
+}
+.cont_tit{
+    margin-left: 78px;
+}
+.t_method{
+    border-bottom:26px solid #f4f5fa;
+}
+/*网银支付的支付中页面*/
+.paymentIn{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.payment_pos{
+    width: 100%;
+    height: 100%;
+    background:white;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+}
+.payIn_pag{
+    width: 430px;
+    height: 344px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -172px;
+    margin-top: -215px;
+    border:1px solid #797979;
+    background:white;
+}
+.payment_h{
+    height: 43px;
+    background:#f00;
+    color:white;
+    font-size:16px;
+    text-align: center;
+    line-height:43px;
+    position:relative;
+}
+.close{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    background:url("../images/B2C/iconfont.png") no-repeat;
+    cursor:pointer;
+}
+.end_cell{
+    width: 138px;
+    height: 38px;
+    border:1px solid #797979;
+    font-size:12px;
+    line-height:38px;
+    text-align: center;
+}
+.end_btn{
+    width: 337px;
+    margin: 0 auto;
+}
+.end_act{
+    width: 140px;
+    height: 40px;
+    background:#f66;
+    font-size:12px;
+    line-height:38px;
+    text-align: center;
+}
+.end_act a{
+    color:white;
+}
+.end_cell a{
+    color:#333;
+}
+.prompt{
+    height: 135px;
+    width: 337px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.pro_l{
+    margin-left: 10px;
+}
+.pro_l p{
+    font-size:12px;
+    line-height: 16px;
+}
+.pro_l_bottom{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom:1px dashed #797979;
+}
+/*网银支付的支付中页面*/
+/*添加的优惠、白条、快捷支付*/
+.dis_che{
+    width: 79px;
+    margin-left: 20px;
+}
+.count_bla{
+    width: 16px;
+    height: 16px;
+    background:url("../images/B2C/u10161.png") no-repeat;
+    position:absolute;
+    right: -20px;
+    top: 50%;
+    margin-top: -8px;
+    cursor:pointer;
+}
+.two{
+    position:relative;
+    font-size:12px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 23px;
+}
+.discount_h{
+    display: none;
+    width: 744px;
+    margin: 0 auto;
+}
+.red_md{
+    vertical-align: middle;
+}
+.discount_pic{
+    line-height: 33px;
+    margin-right: 23px;
+}
+.dis_cont,.dis_amount{
+    line-height: 33px;
+}
+.dis_amount{
+    padding-right: 79px;
+}
+.discount_lst{
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+.discount_pd{
+    padding-left: 8px;
+    margin-bottom: 16px;
+    border:1px solid #797979;
+    font-size:12px;
+}
+.dis_bor{
+    width: 628px;
+    margin-left: 23px;
+    border:1px dashed #797979;
+}
+.integ{
+    color:#f00;
+}
+.has_ensure{
+    width: 180px;
+    height: 40px;
+    background:#f00;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 17px;
+    margin-bottom: 15px;
+    float: right;
+    font-size:12px;
+    color:white;
+    cursor: pointer;
+}
+/*积分的弹出窗口控制*/
+.cash{
+    display: none;
+}
+/*积分的弹出窗口控制*/
+.cash_pos{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:white;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+}
+.cash_pag{
+    position:absolute;
+    top: 253px;
+    left: 50%;
+    margin-left: -262px;
+    width: 509px;
+    height: 326px;
+    border:3px solid #797979;
+    background:white;
+    padding-left: 12px;
+}
+.cash_head{
+    height: 39px;
+    line-height: 39px;
+    font-size:18px;
+    color:#333;
+    border-bottom:1px solid #e5e5e5;
+    position:relative;
+}
+.cash_close{
+    width: 15px;
+    height: 15px;
+    background:url("../images/B2C/iconfont.png") no-repeat;
+    background-size:100%;
+    position:absolute;
+    right: 0;
+    top: 12px;
+    margin-right: 14px;
+    cursor:pointer;
+}
+.cash_section_pag{
+    height: 64px;
+    line-height: 64px;
+    padding-left: 38px;
+    font-size:12px;
+    color:#333;
+    margin-bottom: 24px;
+}
+.cash_use_pag{
+    padding-left: 38px;
+}
+.cash_alt_num{
+    color:#fd0101;
+}
+.cash_use_b{
+    font-size:16px;
+    line-height:34px;
+}
+.cash_use_pt{
+    height: 30px;
+    font-size:12px;
+    line-height:30px;
+    color:#f00;
+}
+.cash_rule{
+    font-size:12px;
+    color:#169bd5;
+}
+.cash_gray{
+    font-size:12px;
+    color:#a8a8a8;
+    margin-top: 12px;
+    margin-left: 75px;
+}
+.cash_ensure{
+    width: 117px;
+    height: 40px;
+    line-height: 40px;
+    background:#f00;
+    color:white;
+    border:none;
+    outline: none;
+}
+.cash_btn{
+    margin-top: 85px;
+    text-align:center;
+}
+.use_exp_section{
+    width: 434px;
+    margin-left: 38px;
+    margin-top: 26px;
+    font-size:18px;
+    color:#999;
+}
+.use_exp_b{
+    color:#333;
+}
+.use_exp_num{
+    margin-top: 18px;
+    padding-bottom: 24px;
+    border-bottom:1px dashed #ccc;
+}
+.use_know{
+    text-align: center;
+    margin-top: 17px;
+}
+.use_exp_know{
+    color:#f00;
+    font-size:18px;
+}
+/*白条*/
+.lous_num{
+    height: 75px;
+    line-height: 75px;
+    font-size:12px;
+    margin-right: 50px;
+}
+.lous_red{
+    color:#f00;
+}
+.inform{
+    height: 75px;
+    font-size:12px;
+}
+.inf_mid{
+    margin-top: 24px;
+}
+.stages{
+    display: block;
+    padding: 8px 16px;
+    line-height:100%;
+    border:1px solid #ff5e5c;
+    font-size:12px;
+    color:#ff5e5b;
+    text-align: center;
+}
+.item{
+    margin-top: 30px;
+    padding: 0 5px 0 6px;
+    border-right: 1px solid #9a9a9a;
+}
+.item_no{
+    border:none;
+}
+/*白条下拉菜单*/
+.lous_tit{
+    display: none;
+    padding-left: 88px;
+    font-size:12px;
+    color:#333;
+}
+.available{
+    margin-right: 122px;
+}
+.lous_list{
+    margin: 21px 0;
+}
+.project{
+    margin-right: 20px;
+    position:relative;
+}
+.project a{
+    display: block;
+    line-height:100%;
+    padding: 8px 16px;
+    border:1px solid #c9d5ea;
+    font-size:12px;
+    color:#999;
+    text-align: center;
+}
+.project .effect{
+    border:1px solid #ff5e5c;
+    color:#ff5e5b;
+}
+.selected strong{
+    width: 12px;
+    height: 11px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    background:url("../images/B2C/newicon.png") no-repeat;
+}
+.ditto{
+    padding: 0 5px;
+    border-right: 1px solid #333;
+}
+.dit_none{
+    border:none;
+}
+.stageInfor{
+    margin-bottom: 9px;
+}
+/*快捷支付*/
+.alt_quickPay{
+    display: none;
+}
+.addCard{
+    width: 78px;
+    height: 29px;
+    background:#f00;
+    color:white;
+    font-size:12px;
+    line-height: 29px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+.append{
+    margin-top: 23px;
+    margin-right: 214px;
+}
+.quickPay_tit li{
+    width: 706px;
+    height: 54px;
+    line-height: 54px;
+    border:1px solid #797979;
+    margin: 0 auto 13px;
+    padding-left: 17px;
+}
+.quickPay_tit li img{
+    vertical-align: middle;
+}
+.quickPay_tit li span{
+    font-size:14px;
+    padding-left: 80px;
+}
+.quickPay_tit li b{
+    font-size:14px;
+    font-weight:normal;
+}
+/*短信验证*/
+.sms{
+    display: none;
+}
+.sms_pos{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background:white;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+}
+.sms_pag{
+    position:absolute;
+    top: 132px;
+    left: 382px;
+    width: 443px;
+    height: 196px;
+    border:1px solid #797979;
+    background:white;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.sms_head{
+    width: 414px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom:1px solid #b8b8b8;
+    font-size:16px;
+    font-weight:bold;
+}
+.phone_num{
+    font-size:0px;
+    line-height: 23px;
+    margin-top: 28px;
+}
+.phone_num b{
+    font-size:12px;
+}
+.sms_text{
+    width: 150px;
+    height: 23px;
+    line-height: 23px;
+    border:1px solid #dcdcdc;
+    font-size:12px;
+    margin-right: 10px;
+}
+.sms_btn{
+    width: 140px;
+    height: 23px;
+    line-height: 23px;
+    border:1px solid #797979;
+    font-size:12px;
+}
+.sms_ensure{
+    width: 142px;
+    height: 40px;
+    background:#f00;
+    font-size:12px;
+    color:white;
+    line-height: 40px;
+    text-align:center;
+    outline:none;
+    border:none;
+    margin-top: 50px;
+    margin-left: 163px;
+}
+.sms_close{
+    position:absolute;
+    right: 17px;
+    top: 9px;
+    width: 15px;
+    height: 15px;
+    background:url("../images/B2C/iconfont.png") no-repeat;
+    cursor:pointer;
+}
+/*输入银行卡*/
+.input_card{
+    display: none;
+}
+.input_text{
+    width: 376px;
+    height: 35px;
+    line-height: 35px;
+    border:1px solid #bebebe;
+}
+.input_card_num{
+    margin-top: 28px;
+}
+.input_card_num b{
+    font-size:16px;
+}
+.input_pag{
+    position:absolute;
+    top: 132px;
+    left: 382px;
+    width: 551px;
+    height: 216px;
+    border:1px solid #797979;
+    background:white;
+    padding-left: 34px;
+    padding-top: 20px;
+}
+.input_head{
+    width: 525px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom:1px solid #b8b8b8;
+    font-size:16px;
+    font-weight:bold;
+}
+.input_ensure{
+    width: 140px;
+    height: 40px;
+    background:#f00;
+    font-size:12px;
+    color:white;
+    line-height: 40px;
+    text-align:center;
+    outline:none;
+    border:none;
+    margin-top: 36px;
+    cursor:pointer;
+}
+/*借记卡*/
+.debit_card{
+    display: none;
+}
+.debit_pag{
+    position:absolute;
+    top: 137px;
+    left: 320px;
+    width: 538px;
+    height: 528px;
+    border:1px solid #797979;
+    background:white;
+    padding-left: 23px;
+}
+.debit_head{
+    font-size:16px;
+    font-weight:bold;
+    line-height:34px;
+    width: 506px;
+    border-bottom:1px solid #797979;
+}
+.debit_sec_head{
+    font-size:12px;
+    color:#333;
+    line-height:32px;
+}
+.debit_sec{
+    margin-top: 39px;
+    margin-bottom: 36px;
+}
+.debit_item{
+    height: 30px;
+    margin-bottom: 6px;
+}
+.debit_item span{
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    font-size:12px;
+    color:#333;
+}
+.type{
+    font-size:12px;
+    color:#333;
+    height: 30px;
+    line-height: 30px;
+}
+.item_p{
+    height: 30px;
+    line-height: 30px;
+    font-size:12px;
+}
+.debit_item input{
+    vertical-align: top;
+    width: 277px;
+    height: 23px;
+    line-height: 23px;
+    font-size:12px;
+    color:#000;
+    background:#ccc;
+    outline:none;
+}
+.documentType{
+    width: 277px;
+    height: 27px;
+    background:#ccc;
+    vertical-align: top;
+}
+.item_p .reserve_num{
+    color:#dbdbdb;
+    background:white;
+}
+.item_p .trends_code{
+    height: 23px;
+    width: 106px;
+    border:1px solid #787878;
+    background:white;
+    color:black;
+}
+.item_p .gain_code{
+    height: 25px;
+    width: 106px;
+    border:1px solid #787878;
+    background:white;
+    color:#333;
+    margin-left: 60px;
+    cursor:pointer;
+}
+.debit_agree{
+    font-size:12px;
+    color:#333;
+}
+.agree{
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-left: 86px;
+}
+.agreement{
+    color:#169bd5;
+    padding-left: 23px;
+}
+.entrue_addcard{
+    width: 136px;
+    height: 43px;
+    line-height: 43px;
+    background:#f00;
+    color:white;
+    font-size:12px;
+    outline:none;
+    border:none;
+    margin-left: 59px;
+    margin-right: 87px;
+    cursor:pointer;
+}
+.cancel_addcard{
+    width: 101px;
+    height: 41px;
+    line-height: 43px;
+    border:1px solid #797979;
+    color:#333;
+    font-size:12px;
+    vertical-align: middle;
+    cursor:pointer;
+}
+/*信用卡*/
+.credit_card{
+    display: none;
+}
+.credit_pag{
+    position:absolute;
+    top: 137px;
+    left: 320px;
+    width: 538px;
+    height: 591px;
+    border:1px solid #797979;
+    background:white;
+    padding-left: 23px;
+}
+.item_p .credit_input{
+    width: 54px;
+    height: 23px;
+    background:white;
+    font-size:12px;
+    color:#333;
+}
+/*添加成功*/
+.add_success{
+    display: none;
+}
+.addSucc_pag{
+    position:absolute;
+    top: 140px;
+    left: 323px;
+    width: 538px;
+    height: 270px;
+    border:1px solid #797979;
+    background:white;
+    padding-left: 23px;
+}
+.addSucc_head{
+    height: 26px;
+    line-height: 26px;
+    font-size:16px;
+    color:#333;
+    font-weight:bold;
+    width: 494px;
+    border-bottom:1px solid #797979;
+    padding-top: 14px;
+    padding-left: 12px;
+}
+.addSucc_sec{
+    margin-top: 34px;
+    margin-left: 113px;
+}
+.addSucc_sec p{
+    height: 50px;
+    line-height: 50px;
+    margin-right: 36px;
+    font-size:12px;
+    color:#333;
+}
+.btn_success{
+    width: 131px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    background:#f00;
+    color:white;
+    font-size:12px;
+    outline:none;
+    border:none;
+    cursor:pointer;
+}
+.addsucc_foot{
+    margin-top: 93px;
+    margin-left: 121px;
+}
+/*网银支付*/
+.addcard_section{
+    margin-right: 214px;
+    margin-top: 20px;
+}
+.addcard_add{
+    display: block;
+    width: 78px;
+    height: 31px;
+    background:#f00;
+    font-size:12px;
+    color:white;
+    line-height: 31px;
+    text-align: center;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
